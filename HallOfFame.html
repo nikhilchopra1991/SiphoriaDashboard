@@ -1,4 +1,9 @@
-<!--banner-->
+<script>
+function displayPreviousScore()
+{
+    $("#includedContent").load("PreviousScore.html");
+}
+</script>
 <body>
 <div>
     <!--<div class="container">-->
@@ -126,7 +131,9 @@
             <div>
                 <vr>
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                <img src="Images/iron_throne.jpg" width="150" height="225" alt="Iron Throne" onclick="displayPreviousScore();" />
+            </div>
         </div>
         <div>
             <hr>
