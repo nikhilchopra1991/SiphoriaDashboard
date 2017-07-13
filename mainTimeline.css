@@ -1,0 +1,41 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-image: url(Images/gotTheme.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 60px;
+}
+.jumbotron {
+      margin-bottom: 0;
+      background:initial;
+      height:150px;
+    }
+.header_Deloitte {
+    margin-left: 50px;
+    margin-top: -45px;
+    margin-bottom:20px;
+}   
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+}
+.carousel-inner {
+    height: 250px;
+    width: 340px;
+}
+#myCarousel {
+    height: 250px;
+    width: 340px;
+}
+.corouselPpt {
+    display:inline-block;
+}
+.teamDeloitte{
+    color:white;
+}
+

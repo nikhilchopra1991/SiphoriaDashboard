@@ -1,0 +1,98 @@
+	.container {
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	div .mumbai, .hyd, .ban, .gur{
+		width: 99%;
+		margin: auto;
+		margin-bottom: 10px;
+		background: rgba(0,0,0,0.4);
+		border-radius: 5px;
+		padding-top: 25px;
+	}
+	div .city {
+		position : relative;
+		background: -webkit-gradient(linear, left top, right top, from(#000000), to(#434343));
+		background: -webkit-linear-gradient(left, #000000, #434343);
+		background: -moz-linear-gradient(left, #000000, #434343);
+		background: -ms-linear-gradient(left, #000000, #434343);
+		background: -o-linear-gradient(left, #000000, #434343);
+		height: 15%;
+		border-radius: 10px;
+		margin-top: 20px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+		-moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	}
+	.cityheader {
+		vertical-align: middle;
+		color: white;
+		width: 80%;
+		padding: 12px 0 0 10px;
+		font-family: 'Cinzel', serif; !important
+		text-decoration: none;
+		font-size: large;
+		font-weight:700;
+	}
+	.citylist{
+		list-style:none;
+		padding-left: 0px;
+		width: 99%;
+		margin: auto;
+	}
+	.citylistitem {
+		list-style:none;
+		margin-bottom:10px;
+		position: relative;
+		margin-left: auto;
+		-webkit-transition: -webkit-transform .4s ease-in-out;
+		transition: transform .4s ease-in-out;
+	}
+	.citylistitem:nth-child(odd):hover {
+		-webkit-transform: rotate(10deg);
+		transform: rotate(10deg);
+	}
+	.citylistitem:nth-child(even):hover {
+		-webkit-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+	}
+	ul li img {
+		cursor: pointer;
+	    display: block;
+		vertical-align: middle;
+		background: #fff;
+		width: 150px;
+		margin: auto auto auto auto;
+		padding: 10px 10px 10px;
+		text-align: center;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+		-moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	}
+	ul li p{
+		cursor: pointer;
+	    display: block;
+		vertical-align: middle;
+		background: #fff;
+		width: 150px;
+		margin: auto auto 10px auto;
+		padding: 10px 10px 10px;
+		text-align: center;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+		-moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+		font-family: 'Cinzel', serif; !important
+		text-decoration: none;
+		color: #292f33;
+		font-size: 14px;
+		font-weight:400;
+	}
