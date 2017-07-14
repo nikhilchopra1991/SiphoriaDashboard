@@ -1,9 +1,11 @@
-﻿<body>
+<body>
   <script>
 
 var xhttp;
 var xhttp1;
 var xhttp2;
+var xhttp3;
+var xhttp4;
 //var x = "";
 // var j =0;
 var str;
@@ -25,8 +27,8 @@ string4 = string1.concat(string2,string3);
 
 
 
-xhttp1.open("GET", "fetch_team_details.php?q=" + string4, true);
-    xhttp1.send();
+xhttp3.open("GET", "fetch_modal_window.php?q=" + str, true);
+    xhttp3.send();
 }
 
 
@@ -49,46 +51,6 @@ document.getElementById("vivek").innerHTML = xhttp.responseText;
 
 
 
-xhttp1 = new XMLHttpRequest();
-
-
-  xhttp1.onreadystatechange = function fetch_team_details(){
-
-
-  if (this.readyState == 4 && this.status == 200) {
-    if(str = "HOUSE TARGAREAN"){
-document.getElementById("targarean_projects").innerHTML = this.responseText;
-
-    }
-
-
-    if(str = "House Stark"){
-    document.getElementById("stark_projects").innerHTML = this.responseText;
-
-    }
-
-    if(str = "House Lannister"){
-    document.getElementById("lannister_projects").innerHTML = this.responseText;
-
-    }
-    if(str = "House Baratheon"){
-    document.getElementById("baratheon_projects").innerHTML = this.responseText;
-
-    }
-
-//window.alert(this.responseText);
-  }
-  }
-
-
-
-
-
-//window.alert(string4);
-
-xhttp1.open("GET", "fetch_team_details.php?q=" + string4, true);
-    xhttp1.send();
-
 
 
 
@@ -108,6 +70,61 @@ document.getElementById("news_feed").innerHTML = this.responseText;
 xhttp2.open("GET", "fetch_news.php", true);
     xhttp2.send();
 
+    xhttp3 = new XMLHttpRequest();
+
+    xhttp3.onreadystatechange = function(){
+
+
+if (this.readyState == 4 && this.status == 200) {
+  if(str= "House Targarean"){
+
+      document.getElementById("modal-content_targarean").innerHTML = this.responseText;
+  }
+
+  if(str= "House Stark"){
+
+      document.getElementById("modal-content_stark").innerHTML = this.responseText;
+  }
+
+  if(str= "House Lannister"){
+
+      document.getElementById("modal-content_Lannister").innerHTML = this.responseText;
+  }
+
+  if(str= "House Baratheon"){
+
+      document.getElementById("modal-content_Baratheon").innerHTML = this.responseText;
+  }
+
+}
+    }
+window.alert(string4);
+    xhttp3.open("GET", "fetch_modal_window.php?q="+str, true);
+        xhttp3.send();
+
+
+
+
+
+
+xhttp4 = new XMLHttpRequest();
+xhttp4.onreadystatechange = function(){
+
+  if (this.readyState == 4 && this.status == 200) {
+
+//document.getElementById("12345").src = "Images/HouseLannisters.jpg";
+//window.alert(this.responseText);
+//document.getElementsById("news_image1").innerHTML= this.responseText;
+}
+
+
+
+}
+
+xhttp4.open("GET", "fetch_news_image.php", true);
+    xhttp4.send();
+
+
 
 
 
@@ -121,7 +138,7 @@ xhttp2.open("GET", "fetch_news.php", true);
                 <div class="col-md-10">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <!-- <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -129,9 +146,11 @@ xhttp2.open("GET", "fetch_news.php", true);
                         </ol>
 
                         <!-- Wrapper for slides -->
-                        <div class="carousel-inner landing_Carousel">
-                            <div class="item active">
-                                <img class="imgCorousel" src="Images/HouseBaratheon.png" alt="">
+                        <div class="carousel-inner landing_Carousel" id = "news_images">
+
+                             <div class="item active">
+
+                                <img id ="news_image1" class="imgCorousel" src="Images/HouseBaratheon.png" alt="">
                                 <div class="carousel-caption">
                                     <p>In Pics : July Friday Special</p>
                                 </div>
@@ -157,7 +176,8 @@ xhttp2.open("GET", "fetch_news.php", true);
                                     <p>In Pics : July Friday Special</p>
                                 </div>
                             </div>
-                        </div>
+
+</div>
 
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -168,6 +188,10 @@ xhttp2.open("GET", "fetch_news.php", true);
                             <span class="glyphicon glyphicon-chevron-right"></span>
                             <span class="sr-only">Next</span>
                         </a>
+
+
+
+
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -248,7 +272,7 @@ xhttp2.open("GET", "fetch_news.php", true);
                 <div class="row">
                     <div class="col-md-3">
                         <a id = "HOUSE TARGAREAN" data-toggle="modal" data-target="#deloitteModalTargarean"  onclick =  "fetch_team(this.id)">
-                            <img src="Images/House Targaryen.jpg" width="200" height="150" alt="House Targaryen">
+                            <img id = "Targarean_Image" src="Images/House Targaryen.jpg" width="200" height="150" alt="House Targaryen">
                         </a>
                     </div>
                     <div class="col-md-3">
@@ -278,20 +302,24 @@ xhttp2.open("GET", "fetch_news.php", true);
     <div class="modal fade" id="deloitteModalTargarean" role="dialog">
       <div class="modal-dialog" id = "modal_body_targarean">
 
-        <!-- <--  Modal content--> -->
-
-           <div class="modal-content">
-             <div class = "modal-header">
 
 
-                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                         <img src="Images/House Targaryen.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
-                         <h3 class="modal-title inlineHeader">House Targaryen</h3>
-
-             </div>
+           <div class="modal-content" id = "modal-content_targarean">
+<!-- <div class = "modal-header">
 
 
-                            <div class="modal-body" id = "modal_body_targarean">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <img id = "Targarean_Image"src="Images/House Targaryen.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
+                         <h3 class="modal-title inlineHeader">House Targarean
+
+
+
+                         </h3>
+
+             </div> -->
+
+
+                            <!-- <div class="modal-body" id = "modal_body_targarean">
 
 
                                <p><h5>Team Details for House Targaryen Team House Targaryen Details of Team House Targaryen House Targaryen.</h5></p>
@@ -299,10 +327,10 @@ xhttp2.open("GET", "fetch_news.php", true);
                                <h5 class="inlineHeader">John Snow</h5>
                                <br />
                                <h4 class="inlineHeader">Projects Involved : </h4>
-                               <p id ="targarean_projects"></p>
+                               <p  id ="targarean_projects"></p>
 
 
-                           </div>
+                           </div> -->
                            <div class="modal-footer">
              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                            </div>
@@ -317,8 +345,8 @@ xhttp2.open("GET", "fetch_news.php", true);
 
 
 
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" id = "modal-content_stark">
+            <!-- <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <img src="Images/House Stark.png" width="70" height="100" alt="House Targaryen" class="inlineHeader">
                     <h3 class="modal-title inlineHeader">House Stark</h3>
@@ -330,7 +358,7 @@ xhttp2.open("GET", "fetch_news.php", true);
                 <br />
                 <h4 class="inlineHeader">Projects Involved : </h4>
                   <p id ="stark_projects"></p>
-            </div>
+            </div> -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
@@ -343,8 +371,8 @@ xhttp2.open("GET", "fetch_news.php", true);
 
         Modal content-->
 
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" id = "modal-content_Lannister">
+            <!-- <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <img src="Images/House Lannister.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
                     <h3 class="modal-title inlineHeader">House Lannister</h3>
@@ -356,7 +384,7 @@ xhttp2.open("GET", "fetch_news.php", true);
                 <br />
                 <h4 class="inlineHeader">Projects Involved : </h4>
                 <p id ="lannister_projects"></p>
-            </div>
+            </div> -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
@@ -370,8 +398,8 @@ xhttp2.open("GET", "fetch_news.php", true);
 
         Modal content-->
 
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" id = "modal-content_Baratheon">
+            <!-- <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <img src="Images/House Baratheon.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
                   <h3 class="modal-title inlineHeader">House Baratheon</h3>
@@ -383,7 +411,7 @@ xhttp2.open("GET", "fetch_news.php", true);
                 <br />
                 <h4  class="inlineHeader">Projects Involved : </h4>
                   <p id ="baratheon_projects"></p>
-            </div>
+            </div> -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
