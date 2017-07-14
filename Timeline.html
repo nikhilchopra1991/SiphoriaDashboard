@@ -1,342 +1,427 @@
-<link rel="stylesheet" href="Content/jquery.flipster.css" />
-    <link rel="stylesheet" href="Content/galleryeffect.css" />
-    <link rel="stylesheet" href="Content/bootstrap.css" />
-    <link rel="stylesheet" href="Content/popuo-box.css" />
-    <link rel="stylesheet" href="Content/style.css" />
-    <link rel="stylesheet" href="Content/font-awesome.min.css" />
-    <link href="mainTimeline.css" rel="stylesheet" />
-    <link rel="stylesheet" href="Content/chocolat.css" type="text/css" media="screen">
-    <script type="application/x-javascript">
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-               function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <script type="text/javascript" src="Scripts/jquery-2.1.4.min.js"></script>
-    <script src="Scripts/responsiveslides.min.js"></script>
-    <script>
-        // You can also use "$(window).load(function() {"
-        $(function () {
-            // Slideshow 4
-            $("#slider3").responsiveSlides({
-                auto: true,
-                pager: false,
-                nav: false,
-                speed: 500,
-                namespace: "callbacks",
-                before: function () {
-                    $('.events').append("<li>before event fired.</li>");
-                },
-                after: function () {
-                    $('.events').append("<li>after event fired.</li>");
-                }
-            });
-
-        });
-    </script>
-    <!--light-box-files -->
-    <script src="Scripts/modernizr.custom.js"></script>
-    <script src="Scripts/jquery.chocolat.js"></script>
-    <!-- PopUp-Box-JavaScript -->
-    <script type="text/javascript">
-        $(function () {
-            $('.filtr-item a').Chocolat();
-        });
-    </script>
-    <!-- //PopUp-Box-JavaScript -->
-    <!-- //js -->
-    <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="Scripts/move-top.js"></script>
-    <script type="text/javascript" src="Scripts/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-            });
-        });
-    </script>
-
-    <script src="Scripts/jquery.flipster.js"></script>
-    <script>
-        $(function () { $(".flipster").flipster({ style: 'carousel', start: 0 }); });
-    </script>
-    <!-- start-smoth-scrolling -->
-    <!-- required-js-files-->
-    <link href="Content/owl.carousel.css" rel="stylesheet">
-    <script src="Scripts/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#owl-demo").owlCarousel({
-                items: 1,
-                lazyLoad: true,
-                autoPlay: true,
-                navigation: false,
-                navigationText: false,
-                pagination: true,
-            });
-        });
-    </script>
-    <!--//required-js-files-->
-    <!-- script-for-menu -->
-    <script>
-
-        $("span.menu").click(function () {
-            $(".top-nav ul").slideToggle("slow", function () {
-            });
-        });
-    </script>
-    <!-- script-for-menu -->
-    <!---->
-    <script>
-
-        $(function () {
-            $('.adsense_btn_close').click(function () {
-                $(this).closest('.adsense_fixed').css('display', 'none');
-            });
-
-            $('.adsense_btn_info').click(function () {
-                if ($('.adsense_info_content').is(':visible')) {
-                    $('.adsense_info_content').css('display', 'none');
-                } else {
-                    $('.adsense_info_content').css('display', 'block');
-                }
-            });
-
-        });
-
-    </script>
-    <script type="text/javascript" src="Scripts/bootstrap-3.1.1.min.js"></script>
-    <!--pop-up-box -->
-    <script src="Scripts/jquery.magnific-popup.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function () {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-                fixedContentPos: false,
-                fixedBgPos: true,
-                overflowY: 'auto',
-                closeBtnInside: true,
-                preloader: false,
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
-        });
-    </script>
-    <!-- //pop-up-box -->
-    <!-- script-for-fade-out -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /*
-                var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-                };
-            */
-            $().UItoTop({ easingType: 'easeOutQuart' });
-        });
-    </script>
 <body>
-    <div class="container-fluid">
-    <div class="flipster">
-        <ul>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>January</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseBaratheon.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Jan 2017</h5>
-                            <p>Jan 2017 SINS event</p>
-                        </div>
-                        <!--<div class="read-button">
-                            <a href="#news" class="scroll">Read More</a>
-                        </div>-->
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>February</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseLannisters.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Feb 2017</h5>
-                            <p>Feb 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>March</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseTargaryen.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>March 2017</h5>
-                            <p>March 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>April</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/Stark.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>April 2017</h5>
-                            <p>April 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>May</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseBaratheon.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>May 2017</h5>
-                            <p>May 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>June</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseLannisters.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>June 2017</h5>
-                            <p>June 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>July</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseTargaryen.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>July 2017</h5>
-                            <p>July 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>August</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/Stark.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Aug 2017</h5>
-                            <p>Aug 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>September</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseBaratheon.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Sep 2017</h5>
-                            <p>Sep 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>October</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseLannisters.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Oct 2017</h5>
-                            <p>Oct 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>November</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/HouseTargaryen.jpg" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Nov 2017</h5>
-                            <p>Nov 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="about-grid-agile">
-                    <div class="about-head-w3">
-                        <h3>December</h3>
-                    </div>
-                    <div class="about-bottom">
-                        <div class="about-bottom-image">
-                            <img src="Images/Stark.png" alt=" " class="img-responsive">
-                        </div>
-                        <div class="about-bottom-bottom">
-                            <h5>Dec 2017</h5>
-                            <p>Dec 2017 SINS event</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <script>
+
+var xhttp;
+var xhttp1;
+var xhttp2;
+var xhttp3;
+var xhttp4;
+//var x = "";
+// var j =0;
+var str;
+var string1;
+var string2;
+var string3;
+var string4;
+
+function fetch_team(str1)
+
+{
+str= str1;
+
+string1 = "'";
+string2 = str;
+string3 = "'";
+string4 = string1.concat(string2,string3);
+//window.alert(str);
+
+
+
+xhttp3.open("GET", "fetch_modal_window.php?q=" + str, true);
+    xhttp3.send();
+}
+
+
+
+
+
+xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+document.getElementById("vivek").innerHTML = xhttp.responseText;
+}
+
+
+  };
+  xhttp.open("GET", "fetch_data.php", true);
+  xhttp.send();
+
+
+
+
+
+
+
+
+
+xhttp2 =  new XMLHttpRequest();
+
+xhttp2.onreadystatechange = function fetch_news_feed(){
+
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("news_feed").innerHTML = this.responseText;
+
+}
+
+
+}
+
+xhttp2.open("GET", "fetch_news.php", true);
+    xhttp2.send();
+
+    xhttp3 = new XMLHttpRequest();
+
+    xhttp3.onreadystatechange = function(){
+
+
+if (this.readyState == 4 && this.status == 200) {
+  if(str= "House Targarean"){
+
+      document.getElementById("modal-content_targarean").innerHTML = this.responseText;
+  }
+
+  if(str= "House Stark"){
+
+      document.getElementById("modal-content_stark").innerHTML = this.responseText;
+  }
+
+  if(str= "House Lannister"){
+
+      document.getElementById("modal-content_Lannister").innerHTML = this.responseText;
+  }
+
+  if(str= "House Baratheon"){
+
+      document.getElementById("modal-content_Baratheon").innerHTML = this.responseText;
+  }
+
+}
+    }
+window.alert(string4);
+    xhttp3.open("GET", "fetch_modal_window.php?q="+str, true);
+        xhttp3.send();
+
+
+
+
+
+
+xhttp4 = new XMLHttpRequest();
+xhttp4.onreadystatechange = function(){
+
+  if (this.readyState == 4 && this.status == 200) {
+
+//document.getElementById("12345").src = "Images/HouseLannisters.jpg";
+//window.alert(this.responseText);
+//document.getElementsById("news_image1").innerHTML= this.responseText;
+}
+
+
+
+}
+
+xhttp4.open("GET", "fetch_news_image.php", true);
+    xhttp4.send();
+
+
+
+
+
+
+  </script>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <!-- <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner landing_Carousel" id = "news_images">
+
+                             <div class="item active">
+
+                                <img id ="news_image1" class="imgCorousel" src="Images/HouseBaratheon.png" alt="">
+                                <div class="carousel-caption">
+                                    <p>In Pics : July Friday Special</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img class="imgCorousel" src="Images/HouseLannisters.jpg" alt="">
+                                <div class="carousel-caption">
+                                    <p>In Pics : July Friday Special</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="Images/HouseTargaryen.jpg" alt="" >
+                                <div class="carousel-caption">
+                                    <p>In Pics : July Friday Special</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="Images/iron_throne.jpg" alt="" >
+                                <div class="carousel-caption">
+                                    <p>In Pics : July Friday Special</p>
+                                </div>
+                            </div>
+
 </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <svg height="260" width="500">
+                        <line x1="10" y1="0" x2="10" y2="320" style="stroke:rgb(255,255,255);stroke-width:2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11 deloitteFontColor" id = "news_feed">
+                    <!-- <a class="teamDeloitte"><u>Friday Social will be conducted on last Friday.</u></a><br />
+                    <a class="teamDeloitte"><u>Sinstagram event to be conducted on 25 August 2017</u></a><br />
+                    <a class="teamDeloitte"><u>Team Jarvis won the SIPl tournament</u></a><br />
+                    <a class="teamDeloitte"><u>SIPL event will be conducted later this month.</u></a><br />
+                    <a class="teamDeloitte"><u>Read More</u></a> -->
+                </div>
+                <div class="col-md-1">
+                    <svg height="260" width="500">
+                        <line x1="10" y1="0" x2="10" y2="320" style="stroke:rgb(255,255,255);stroke-width:2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-11">
+                    <table class="table table-bordered deloitteFontColor" id = "vivek">
+                        <thead>
+                            <tr>
+                                <th>Pos.</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div>
+        <p class="teamDeloitte"><b>Teams</b></p>
+        <svg height="20" width="1500">
+            <line x1="0" y1="10" x2="1500" y2="10" style="stroke:rgb(255,255,255);stroke-width:2" />
+        </svg>
+    </div>
+
+    <footer class="container-fluid text-center footer_Deloitte">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a id = "HOUSE TARGAREAN" data-toggle="modal" data-target="#deloitteModalTargarean"  onclick =  "fetch_team(this.id)">
+                            <img id = "Targarean_Image" src="Images/House Targaryen.jpg" width="200" height="150" alt="House Targaryen">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a id = "House Stark" data-toggle="modal" data-target="#deloitteModalStark" onclick =  "fetch_team(this.id)">
+                            <img src="Images/House Stark.png" width="200" height="150" alt="House Stark">
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a id = "House Lannister" data-toggle="modal" data-target="#deloitteModalLannister" onclick =  "fetch_team(this.id)">
+                            <img src="Images/House Lannister.jpg" width="200" height="150" alt="House Lannister">
+                            <!--<img src="Images/HouseLannisters.jpg" width="130" height="150" alt="House Lannisters">-->
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a id = "House Baratheon" data-toggle="modal" data-target="#deloitteModalBaratheon" onclick =  "fetch_team(this.id)">
+                            <img src="Images/House Baratheon.jpg" width="200" height="150" alt="House Baratheon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+
+
+    <div class="modal fade" id="deloitteModalTargarean" role="dialog">
+      <div class="modal-dialog" id = "modal_body_targarean">
+
+
+
+           <div class="modal-content" id = "modal-content_targarean">
+<!-- <div class = "modal-header">
+
+
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <img id = "Targarean_Image"src="Images/House Targaryen.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
+                         <h3 class="modal-title inlineHeader">House Targarean
+
+
+
+                         </h3>
+
+             </div> -->
+
+
+                            <!-- <div class="modal-body" id = "modal_body_targarean">
+
+
+                               <p><h5>Team Details for House Targaryen Team House Targaryen Details of Team House Targaryen House Targaryen.</h5></p>
+                               <h4 class="inlineHeader">Captain : </h4>
+                               <h5 class="inlineHeader">John Snow</h5>
+                               <br />
+                               <h4 class="inlineHeader">Projects Involved : </h4>
+                               <p  id ="targarean_projects"></p>
+
+
+                           </div> -->
+                           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+          </div>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="deloitteModalStark" role="dialog">
+    <div class="modal-dialog">
+
+
+
+        <div class="modal-content" id = "modal-content_stark">
+            <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <img src="Images/House Stark.png" width="70" height="100" alt="House Targaryen" class="inlineHeader">
+                    <h3 class="modal-title inlineHeader">House Stark</h3>
+            </div>
+            <div class="modal-body">
+                <p><h5>Team Details for House Stark</h5></p>
+                <h4 class="inlineHeader">Captain : </h4>
+                <h5 class="inlineHeader">John Snow</h5>
+                <br />
+                <h4 class="inlineHeader">Projects Involved : </h4>
+                  <p id ="stark_projects"></p>
+            </div> -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+</div>
+</div>
+
+<div class="modal fade" id="deloitteModalLannister" role="dialog">
+    <div class="modal-dialog">
+
+        Modal content-->
+
+        <div class="modal-content" id = "modal-content_Lannister">
+            <!-- <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <img src="Images/House Lannister.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
+                    <h3 class="modal-title inlineHeader">House Lannister</h3>
+            </div>
+            <div class="modal-body">
+                <p><h5>Team Details for House Lannister.</h5></p>
+                <h4 class="inlineHeader">Captain : </h4>
+                <h5 class="inlineHeader">John Snow</h5>
+                <br />
+                <h4 class="inlineHeader">Projects Involved : </h4>
+                <p id ="lannister_projects"></p>
+            </div> -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+</div>
+</div>
+
+
+<div class="modal fade" id="deloitteModalBaratheon" role="dialog">
+    <div class="modal-dialog">
+
+        Modal content-->
+
+        <div class="modal-content" id = "modal-content_Baratheon">
+            <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <img src="Images/House Baratheon.jpg" width="70" height="100" alt="House Targaryen" class="inlineHeader">
+                  <h3 class="modal-title inlineHeader">House Baratheon</h3>
+            </div>
+            <div class="modal-body">
+                <p><h5>Team Details for House Baratheon .</h5></p>
+                <h4 class="inlineHeader">Captain : </h4>
+                <h5 class="inlineHeader">John Snow</h5>
+                <br />
+                <h4  class="inlineHeader">Projects Involved : </h4>
+                  <p id ="baratheon_projects"></p>
+            </div> -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+
+
+
 </body>
