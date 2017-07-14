@@ -1,0 +1,34 @@
+<?php
+
+require 'connect_to_db.php';
+
+$sql = "SELECT small_title, image_path as P
+FROM news_feed
+ORDER BY timestamp_news DESC LIMIT 4";
+
+$output = "";
+ $result = mysqli_query($conn, $sql);
+// $row = mysqli_fetch_assoc($result);
+
+if (mysqli_num_rows($result) > 0) {
+
+$row = mysqli_fetch_assoc($result) {
+
+
+
+// $output .=   "  <div class= 'item '>
+//   <img class='imgCorousel src='".$row['P']."' alt=''>
+//   <div class='carousel-caption'>
+//       <p>In Pics :".$row['small_title']."</p>
+//   </div></div>";
+
+
+}
+}
+
+
+
+
+
+
+?>
